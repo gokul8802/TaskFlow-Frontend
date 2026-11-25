@@ -1,16 +1,121 @@
-# React + Vite
+# TaskFlow – Task Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TaskFlow is a responsive task management application built using React. It allows users to securely register, log in, and manage their daily tasks through an interactive dashboard.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User Registration and Login
+- JWT-based Authentication
+- Protected Routes
+- Create, View, Update and Delete Tasks
+- Task Status Management
+- Dashboard with Task Summary
+- Form Validation
+- Loading and Error States
+- Responsive User Interface
+- REST API Integration
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- Vite
+- React Router DOM
+- CSS
+- Fetch API
+- Node.js and Express REST API
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+├── components/
+│   ├── Loader.jsx
+│   └── Navbar.jsx
+├── context/
+│   └── AuthContext.jsx
+├── pages/
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   ├── Dashboard.jsx
+│   ├── TaskDetails.jsx
+│   └── TaskForm.jsx
+├── services/
+│   └── api.js
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+## Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/gokul8802/TaskFlow-Frontend.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd TaskFlow-Frontend
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env` file in the project root and add:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+### 5. Start the Backend
+
+Ensure the TaskFlow backend is running on port 5000.
+
+### 6. Start the Frontend
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal.
+
+## Production Build
+
+To generate the production build:
+
+```bash
+npm run build
+```
+
+## API Integration
+
+The frontend communicates with the TaskFlow REST API.
+
+Main API endpoints:
+
+- POST `/api/auth/register`
+- POST `/api/auth/login`
+- GET `/api/tasks`
+- POST `/api/tasks`
+- GET `/api/tasks/:id`
+- PUT `/api/tasks/:id`
+- DELETE `/api/tasks/:id`
+
+## Author
+
+Gokul Raj
+
+GitHub: https://github.com/gokul8802
+
+---
+
+Developed as part of the Valentius Kryptix Internship – WA-3.
